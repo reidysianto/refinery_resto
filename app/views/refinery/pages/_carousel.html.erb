@@ -1,0 +1,24 @@
+<div id="myCarousel" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="item active">
+      <img class="inner-item" data-src="holder.js/800x480" alt="...">
+      <div class="carousel-caption">
+        carousel-caption 1
+      </div>
+    </div>
+    <% (2..3).each do|x|%>
+    <div class="item ">
+      <img class="inner-item" data-src="holder.js/800x480" alt="...">
+      <div class="carousel-caption">
+        carousel-caption <%= x%>
+      </div>
+    </div>
+    <%end%>
+  </div>
+  <button class="left carousel-control" href="#myCarousel" data-slide="prev" >
+    <span class="glyphicon glyphicon-circle-arrow-left"> </span> 
+  </button>
+  <button class="right carousel-control" href="#myCarousel" data-slide="next" >
+    <span class="glyphicon glyphicon-circle-arrow-right"></span>
+  </button>
+</div>

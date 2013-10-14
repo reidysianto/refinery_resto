@@ -1,0 +1,17 @@
+<nav class="navbar-wrapper navbar-default " role="navigation">
+    
+    <div class="navbar-header">
+      <%= link_to 'Restoran Terserah',root_path,class: 'navbar-brand '%>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     
+    </div>
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <div class="collapse navbar-collapse lyphicon glyphicon-align-justify">
+<%= Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html %>
+      </div>
+    </div>  
+</nav>
