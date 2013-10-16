@@ -1,11 +1,35 @@
 <% content_for :body do %>
-  <ul id="galleries">
-    <% @galleries.each do |gallery| %>
-      <li>
-        <%= link_to gallery.name, refinery.galleries_gallery_path(gallery) %>
-      </li>
-    <% end %>
-  </ul>
+
 <% end %>
 
 <%= render '/refinery/content_page' %>
+<div class='container'>
+  <div class="row">
+    <div class='jumbotron'>
+      <div class="row text-center">
+        <h2 >Food of the day</h2>
+        <%= image_tag @galleries.last.image.url(), class:"img-primary img-responsive"%>     
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class='container'>
+  
+<% @galleries.each do |t| %>
+  <% if t.id % 4 == 0  %>
+    <div class="row">
+  <%end%>
+  <div class='col-md-3 text-center'>
+    <%= link_to refinery.galleries_gallery_path(t),class: 'navbar-link' do %>
+    <%= image_tag t.image.url(),class: "img-thumbnail img-thumb"%>
+    <p class="nav navbar-link"><%= t.name%></p>
+    <%end%>
+  </div>
+<% if t.id % 4 == 0  %>
+    </div>
+    <hr></hr>    
+  <%end%>
+<%end%>
+</div>
+

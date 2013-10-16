@@ -14,10 +14,15 @@
  *= require_self
  *= require_tree .
  */
-.test {
-  padding-top: 300px;
+.img-thumb {
+  width: 150px;
+  height: 150px;
 }
-
-.test1 {
-  padding-top: 30px;
+.img-medium {
+  width: 350px;
+  height: 350px;
+}
+.img-primary{
+ margin-left: auto ;
+  margin-right: auto ;
 }
