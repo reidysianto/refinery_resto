@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="jumbotron">
+    <%=raw @page.content_for(:promo) %>
+  </div>
+  <div class="row ">
+    <h3 class="food-time">Appetizer</h3>
+    <%=raw @page.content_for(:appetizer) %>
+    
+    </div>
+  </div>
+  <div class="row">
+    <h3 class='food-time'>Main desert</h3>
+    <%=raw @page.content_for(:main) %>
+  </div>
+  <div class="row">
+    <h3 class='food-time'>Main desert</h3>
+    <%=raw @page.content_for(:desert) %>
+  </div>
+</div>

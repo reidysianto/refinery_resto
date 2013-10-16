@@ -1,16 +1,16 @@
 <div id="myCarousel" class="carousel slide">
   <div class="carousel-inner">
     <div class="item active">
-      <img class="inner-item" data-src="holder.js/800x480" alt="...">
+      <%=image_tag @page.images.first.url(),class: 'inner-item img-primary'%>
       <div class="carousel-caption">
-        carousel-caption 1
+        <%=@page.images.first.image_name%>
       </div>
     </div>
-    <% (2..3).each do|x|%>
+    <% (2..3).each do|x| carousel= @page.images.find(x)%>
     <div class="item ">
-      <img class="inner-item" data-src="holder.js/800x480" alt="...">
+     <%=image_tag carousel.url(),class: 'inner-item img-primary'%>
       <div class="carousel-caption">
-        carousel-caption <%= x%>
+        <%=carousel.image_name%>
       </div>
     </div>
     <%end%>

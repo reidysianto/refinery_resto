@@ -7,6 +7,7 @@ gem 'anjlab-bootstrap-rails',
 gem 'faker'
 gem 'sqlite3'
 gem "paperclip", "~> 3.0"
+gem 'refinerycms-page-images', '~> 2.1.0'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 group :development do

@@ -1,15 +1,11 @@
 <% content_for :body do %>
 
 <% end %>
-
-<%= render '/refinery/content_page' %>
 <div class='container'>
   <div class="row">
     <div class='jumbotron'>
-      <div class="row text-center">
-        <h2 >Food of the day</h2>
+        <h2 class="text-center">Food of the day</h2>
         <%= image_tag @galleries.last.image.url(), class:"img-primary img-responsive"%>     
-      </div>
     </div>
   </div>
 </div>
