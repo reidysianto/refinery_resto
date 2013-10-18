@@ -1,9 +1,14 @@
 <div class="container">
   <div class="col-md-5">
-     <%=raw @page.content_for(:body) %>
+    <h4 class="contact">Phone</h4>
+    <p><%= copywriting('phone') %></p>
+    <h4 class="contact">Address</h4>
+    <p><%= copywriting('address')%></p>
+    <h4 class="contact">Email</h4>
+    <p><%= copywriting('email')%></p>
   </div>
   <div class="col-md-3 col-md-offset-4">
     <h3>Find us Here</h3>
-      <iframe width="350" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=16.728687,-169.534174&amp;num=1&amp;t=h&amp;ie=UTF8&amp;z=14&amp;output=embed"></iframe>
+      <iframe width="350" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=<%= copywriting('address').gsub(" ",'+')%>&amp;t=h&amp;ie=UTF8&amp;hq=&amp;hnear=<%= copywriting('address').gsub(" ",'+')%>&amp;output=embed"></iframe>
   </div>
 </div>

@@ -20,6 +20,7 @@ module Refinery
       self.selected_css = :active
       self.first_css = :first
       self.last_css = :last
+      self.max_depth= 2
       def roots
         config.roots.presence || collection.roots
       end

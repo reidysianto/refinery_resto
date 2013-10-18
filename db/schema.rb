@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(:version => 20131018025505) do
   end
 
   add_index "refinery_copywriting_phrase_translations", ["locale"], :name => "index_copywriting_phrase_translations_on_locale"
-  add_index "refinery_copywriting_phrase_translations", ["refinery_copywriting_phrase_id"], :name => "index_short_on_refinery_copywriting_phrase_id"
+  add_index "refinery_copywriting_phrase_translations", ["refinery_copywriting_phrase_id"], :name => "index_copywriting_phrase_translations_on_copywriting_phrase_id"
 
   create_table "refinery_copywriting_phrases", :force => true do |t|
     t.string   "name"

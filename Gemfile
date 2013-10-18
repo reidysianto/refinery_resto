@@ -5,7 +5,7 @@ gem 'anjlab-bootstrap-rails',
 :require => 'bootstrap-rails',
 :github => 'anjlab/bootstrap-rails'
 gem 'faker'
-gem 'sqlite3'
+gem 'mysql2'
 gem "paperclip", "~> 3.0"
 gem 'refinerycms-page-images', '~> 2.1.0'
 gem 'refinerycms-copywriting'
@@ -14,7 +14,6 @@ gem 'refinerycms-copywriting'
 group :development do
   gem 'better_errors'
   gem "binding_of_caller"
-  gem 'sqlite3'
 end
 
 
@@ -49,7 +48,7 @@ gem 'jquery-rails'
 # gem 'debugger'
 
 # Refinery CMS
-gem 'refinerycms', '~> 2.1.0'
+gem 'refinerycms', '2.1.0'
 # Optionally, specify additional Refinery CMS Extensions here:
 gem 'refinerycms-acts-as-indexed', '~> 1.0.0'
 #  gem 'refinerycms-blog', '~> 2.1.0'
