@@ -1,0 +1,18 @@
+<% if @scopes.any? %>
+<ul class='collapsible_menu closed'>
+  <li>
+    <% title = @scope ? t('.filtered_by', :filter_scope => @scope.capitalize) : t('.filter_by_scope') %>
+    <%= link_to title, '#', :class => 'scope_icon' %>
+  </li>
+  <% if @scope %>
+  <li>
+    <%= link_to t('.clear_scope_filter'), refinery.copywriting_admin_phrases_path %>
+  </li>
+  <% end %>
+  <% (@scopes - [@scope]).each do |s| %>
+    <li class='<%= s == @scope ? 'selected' : 'closed' %>'>
+      <%= link_to s.capitalize, refinery.copywriting_admin_phrases_path(:filter_scope => s) %>
+    </li>
+  <% end %>
+</ul>
+<% end %>

@@ -8,6 +8,7 @@ gem 'faker'
 gem 'sqlite3'
 gem "paperclip", "~> 3.0"
 gem 'refinerycms-page-images', '~> 2.1.0'
+gem 'refinerycms-copywriting'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 group :development do
@@ -49,12 +50,10 @@ gem 'jquery-rails'
 
 # Refinery CMS
 gem 'refinerycms', '~> 2.1.0'
-
 # Optionally, specify additional Refinery CMS Extensions here:
 gem 'refinerycms-acts-as-indexed', '~> 1.0.0'
 #  gem 'refinerycms-blog', '~> 2.1.0'
 #  gem 'refinerycms-inquiries', '~> 2.1.0'
 #  gem 'refinerycms-search', '~> 2.1.0'
-#  gem 'refinerycms-page-images', '~> 2.1.0'
 
 gem 'refinerycms-galleries', :path => 'vendor/extensions'

@@ -11,7 +11,32 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131016045058) do
+ActiveRecord::Schema.define(:version => 20131018025505) do
+
+  create_table "refinery_copywriting_phrase_translations", :force => true do |t|
+    t.integer  "refinery_copywriting_phrase_id"
+    t.string   "locale"
+    t.text     "value"
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
+  end
+
+  add_index "refinery_copywriting_phrase_translations", ["locale"], :name => "index_copywriting_phrase_translations_on_locale"
+  add_index "refinery_copywriting_phrase_translations", ["refinery_copywriting_phrase_id"], :name => "index_short_on_refinery_copywriting_phrase_id"
+
+  create_table "refinery_copywriting_phrases", :force => true do |t|
+    t.string   "name"
+    t.text     "default"
+    t.text     "value"
+    t.string   "scope"
+    t.integer  "page_id"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+    t.string   "phrase_type"
+    t.date     "last_access_at"
+  end
+
+  add_index "refinery_copywriting_phrases", ["name", "scope"], :name => "index_copywriting_phrases_on_name_and_scope"
 
   create_table "refinery_galleries", :force => true do |t|
     t.string   "name"
