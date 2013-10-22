@@ -8,6 +8,7 @@
   <% custom_stylesheets.each do |css| %>
     <%= stylesheet_link_tag css.path, css.options %>
   <% end %>
+  
   <%= yield :stylesheets %>
   <%= render 'refinery/admin/javascripts' %>
 </head>

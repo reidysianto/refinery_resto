@@ -1,20 +1,21 @@
+
 <!DOCTYPE html>
 <%= render "/refinery/html_tag" %>
   <% site_bar = render('/refinery/site_bar', :head => true) -%>
   <head>
-    <%= render "/refinery/head_inverse" %>
+    <%= render "/refinery/head" %>
   </head>
   <body id="<%= canonical_id @page %>">
     <%= site_bar -%>
     <div id="page_container">
       <header>
-        <%= render "/refinery/header_inverse" -%>
+        <%= render "/refinery/header" -%>
       </header>
       <section id="page">
         <%= yield %>
       </section>
       <footer>
-        <%= render "/refinery/footer_inverse" -%>
+        <%= render "/refinery/footer" -%>
       </footer>
     </div>
     <%= render "/refinery/javascripts" %>

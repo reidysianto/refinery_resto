@@ -1,19 +1,13 @@
-<div class="container">
-  <div class='row'>
-    <div class="col-md-8 col-md-offset-2">
-      <%= render 'refinery/home/carousel'%>
-    </div>
-  </div>
-</div>
-<hr></hr>
-<div class="container">
-  <div class="row"> 
-      <%= render 'refinery/home/subcontent' %>
-  </div>
-</div>
-<hr></hr>
-<div class="container ">
-  <div class="row">
+<%= render 'refinery/home/carousel'%>
+  
+
+<div class="container marketing">
+
+  <%= render 'refinery/home/subcontent' %>
+
+  <hr class="featurette-divider" />
+  <div class="row featurette">
     <%=raw @page.content_for(:blog) %>
   </div>
 </div>
+
